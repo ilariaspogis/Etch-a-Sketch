@@ -1,16 +1,14 @@
 const gridBox = document.getElementById("divGridBox");
-//Create the grid based on user input
 let makeGrid = (numSize) => {
-    gridBox.innerHTML = (""); //Reset the grid
+    gridBox.innerHTML = (""); 
     for (i = 0; i < numSize * numSize; i++) {
-        let gridSquare = document.createElement("div"); //add new square
-        gridSquare.classList.add('gridSquare'); //assign css class
+        let gridSquare = document.createElement("div");
+        gridSquare.classList.add('gridSquare');
         gridBox.appendChild(gridSquare);
     }
     setSquareSize(numSize);
     document.getElementById("divGridBox").style.visibility = "visible";
 }
-//get user input for grid size
 let gridSize = () => {
     let gridParam = '';
     gridParam = prompt("How many Rows and Columns would you like? Maximum is 100. ");
@@ -21,7 +19,6 @@ let gridSize = () => {
     return gridParam;
 }
 
-//Set size for grid squares based on user input, to be called in makeGrid
 let setSquareSize = (numSize) => {
     let baseSquare = document.getElementsByClassName("gridSquare");
     let i;
@@ -31,7 +28,6 @@ let setSquareSize = (numSize) => {
     }
 }
 
-//Square fills: To be called by buttons, black is the default.
 let etchBlack = () => {
     document.getElementById("divContainer").classList.remove("shake");
     let gridSquare = document.querySelectorAll(".gridSquare");
@@ -41,7 +37,7 @@ let etchBlack = () => {
         });
     });
 }
-//Fill in the squares based on user's chosen color
+
 let etchColor = (color) => {
     document.getElementById("divContainer").classList.remove("shake");
     let gridSquare = document.querySelectorAll(".gridSquare");
@@ -51,7 +47,7 @@ let etchColor = (color) => {
         });
     });
 }
-//Erase squares (back to the default background)
+
 let etchErase = () => {
     document.getElementById("divContainer").classList.remove("shake");
     let gridSquare = document.querySelectorAll(".gridSquare");
@@ -61,7 +57,7 @@ let etchErase = () => {
         });
     });
 }
-//Clear the entire grid, retaining size and last picked fill
+
 let etchClear = () => {
     document.getElementById("divContainer").classList.remove("shake");
     document.getElementById("divContainer").classList.add("shake");
@@ -71,7 +67,7 @@ let etchClear = () => {
         gridSquare.style.opacity="1";
     });
 }
-//Increase opacity on each pass 
+
 let etchGreyscale = () => {
     document.getElementById("divContainer").classList.remove("shake");
     etchClear();    
@@ -85,7 +81,7 @@ let etchGreyscale = () => {
         });
     });
 }
-//Fill the grid with unpopped "bubble wrap" that pops
+
 let etchBubble = () => {
     document.getElementById("divContainer").classList.remove("shake");
     let gridSquare = document.querySelectorAll(".gridSquare");
@@ -99,8 +95,6 @@ let etchBubble = () => {
     });
 }
 
-
-//Button listeners
 btnBlack.addEventListener('click', function () { makeGrid(gridSize()) });
 btnBlack.addEventListener('click', function () { etchBlack() });
 btnGreyscale.addEventListener('click', function () { etchGreyscale() });
