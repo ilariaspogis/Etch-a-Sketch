@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="app.css" />
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+</head>
+
+<body>
+    <h1>Etch-a-Sketch</h1>
+    <div id="divBtnWrap">
+        <div id="divBtn">
+           
+            <div class="svg-wrapper" id="btnBlack">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                        <p><span class="spot"></span>New Sketch</p>
+                    </div>
+                </svg>
+            </div>
+        
+            <div class="svg-wrapper" id="btnColor">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                        <p><span class="spot"></span>Colour</p>
+                    </div>
+                </svg>
+            </div>
+            <div class="svg-wrapper" id="btnGreyscale">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                        <p><span class="spot"></span>Greyscale</p>
+                    </div>
+                </svg>
+            </div>
+            <div class="svg-wrapper" id="btnBubble">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                        <p><span class="spot"></span>Pop that!</p>
+                    </div>
+                </svg>
+            </div>
+            <div class="svg-wrapper" id="btnEraser">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                        <p><span class="spot"></span>Erase</p>
+                    </div>
+                </svg>
+            </div>
+            <div class="svg-wrapper" id="btnClear">
+                <svg height="40" width="150" xmlns="http://www.w3.org/2000/svg">
+                    <rect id="shape" height="40" width="150" />
+                    <div id="text">
+                        <p><span class="spot"></span>Clear</p>
+                    </div>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div id=divContainer> 
+        <div id="divGridBox"></div>
+    </div>
+    <script src="https://unpkg.com/vanilla-picker@2"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

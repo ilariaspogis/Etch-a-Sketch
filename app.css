@@ -1,0 +1,123 @@
+html, body{
+    height: 100%;
+}
+html{
+    background: url(images/woodwall.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+.gridSquare{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    width:0;
+    height:0;
+    background: #fae6f0;
+    border: 1px solid black;
+}
+.gridSquare + .gridSquare, .gridSquare:first-child{
+    border-top: none;
+    border-right: none;
+}
+
+#divBtnWrap{
+    text-align: center;
+}
+#divBtn{
+    display: inline-block;
+}
+#divContainer{
+    height: 100%;
+    display: flex;
+align-items: center;
+justify-content: center;
+
+}
+#divGridBox{
+    padding: 20px;
+    visibility: hidden;
+    flex-wrap: wrap;
+    display: flex;
+    height:750px;
+    width:750px;
+    border-image-slice: 131 125 137 134;
+border-image-width: 20px 20px 20px 20px;
+border-image-outset: 0px 0px 0px 0px;
+border-image-repeat: stretch stretch;
+border-image-source: url("images/frame.png");
+box-shadow:         3px 3px 5px 6px #000000;
+
+}
+h1{
+    font-family: "Donatello","Courier New", Courier, monospace;
+    font-size: 5em;
+    color: lightcoral;
+    text-shadow: 5px 5px #000000;
+    text-align: center;
+}
+
+.spot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+ 
+  .svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px
+  }
+  
+  #shape {
+    stroke-width: 10px;
+    fill: transparent;
+    stroke: lightcoral;
+    stroke-dasharray: 85 400;
+    stroke-dashoffset: -220;
+    transition: 1s all ease;
+  }
+ 
+  #text p {
+    margin-top: -35px;
+    text-align: center;
+  }
+  
+  #text p {
+    font-family: 'Courier New', Courier, monospace;
+    color: lightcoral;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-shadow: 2px 2px #000000;
+  }
+  
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 8px;
+    stroke-dashoffset: 0;
+    stroke: lightcoral(243, 165, 217);
+  }
+  
+  .shake{
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
